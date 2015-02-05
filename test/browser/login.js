@@ -1,11 +1,11 @@
 var mega = require('../..');
-var local = require('./local');
+var conf = require('./conf');
 
 describe('Login test', function () {
   it('should login succeeded', function (done) {
     mega({
-      email: local.email,
-      password: local.password
+      email: conf.email,
+      password: conf.password
     }, function (err) {
       try {
         expect(err).to.not.be.ok;
@@ -20,7 +20,7 @@ describe('Login test', function () {
   
   it('should login failed', function (done) {
     mega({
-      email: local.email,
+      email: conf.email,
       password: 'invalid_password'
     }, function (err) {
       try {

@@ -1,3 +1,13 @@
 language: node_js
 node_js:
   - 0.10
+
+before_script:
+  - openssl enc -d -aes256 -k $ENCRYPTION_KEY -in test/browser/ci_conf.encrypted -out test/browser/conf.js
+  - sh -e /etc/init.d/xvfb start
+
+env:
+  global:
+    - CHROME_BIN=chromium-browser
+    - DISPLAY=:99.0
+    - secure: "UlxKbqzxOPzBVlwPA6iFqdd48zP1LOPAxl1JGimVTa8OrQEfiaHQDpr546OHIDxz3TVhADRihPStmELFrlF8JkBfXVPYKkZgAyOWeQityVhW/ofXX4ThY0NA4MHDUEzb+xStScUKpJcEGMoU3b3sxPWK2mxzfR0bwoZqr3irhps="
