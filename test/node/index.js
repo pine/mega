@@ -1,8 +1,8 @@
 var assert = require('assert')
-var crypto = require('../lib/crypto')
+var crypto = require('../../lib/crypto')
 var node_crypto = require('crypto')
-var mega = require('../lib/mega')
-var util = require('../lib/util')
+var mega = require('../../lib/mega')
+var util = require('../../lib/util')
 
 // Generate buffer with specific size.
 function randBuffer(size, start, step) {
