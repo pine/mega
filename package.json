@@ -12,14 +12,15 @@
     "storage"
   ],
   "scripts": {
-    "test": "node test"
+    "test": "node test/node"
   },
   "author": "Tõnis Tiigi <tonistiigi@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "browser-request": "^0.3.3",
     "request": ">=2.10.0",
-    "through": "~2.1.0",
-    "stream-combiner": "0.0.1"
+    "stream-combiner": "0.0.1",
+    "through": "~2.1.0"
   },
   "devDependencies": {
     "optimist": "~0.3.5",
