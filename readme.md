@@ -30,7 +30,9 @@ See examples directory for quick start.
 
 ## Browser support
 
-This module also works in the browser with [browserify](https://github.com/substack/node-browserify). Not all patches have landed yet so you should use [this fork](https://github.com/tonistiigi/node-browserify) and `request@2.10.0`. See [demo page](http://tonistiigi.github.com/mega/) for preview.
+This module also works in the browser with [browserify](https://github.com/substack/node-browserify). ~~Not all patches have landed yet so you should use [this fork](https://github.com/tonistiigi/node-browserify) and `request@2.10.0`. See [demo page](http://tonistiigi.github.com/mega/) for preview.~~
+
+You don't need any patch when you use it in your project using Browserify.
 
 ## API
 
