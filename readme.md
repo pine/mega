@@ -1,4 +1,6 @@
-[![Build Status](https://secure.travis-ci.org/tonistiigi/mega.png)](http://travis-ci.org/tonistiigi/mega)
+mega
+------
+[![Build Status](https://travis-ci.org/pine613/mega.svg?branch=master)](https://travis-ci.org/pine613/mega)
 
 ## Read first
 
