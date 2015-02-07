@@ -28,7 +28,7 @@ describe('Download test', function () {
     }, done);
   });
   
-  it('should can download TestFile1.txt', function (done) {
+  it('should download a text file', function (done) {
     var file1 = _.find(storage.root.children,
       function (x) { return x.name === 'TestFile1.txt'; });
     
