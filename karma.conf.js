@@ -1,6 +1,8 @@
 // Karma configuration
 // Generated on Fri Feb 06 2015 04:09:58 GMT+0900 (Tokyo Standard Time)
 
+var _ = require('lodash');
+
 module.exports = function(config) {
   config.set({
 
@@ -61,11 +63,11 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: [
+    browsers: _.compact([
       (process.env.CI ? 'Chrome_CI' : 'Chrome'),
       'Firefox',
-      (/^win/.test(process.platform) ? 'IE' : null)
-    ],
+      (/^win/.test(process.platform) ? 'IE' : null) // if Windows
+    ]),
     
     customLaunchers: {
         Chrome_CI: {
