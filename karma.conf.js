@@ -64,7 +64,7 @@ module.exports = function(config) {
     browsers: [
       (process.env.CI ? 'Chrome_CI' : 'Chrome'),
       'Firefox',
-      'IE'
+      (/^win/.test(process.platform) ? 'IE' : null)
     ],
     
     customLaunchers: {
