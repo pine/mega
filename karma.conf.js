@@ -10,7 +10,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: [ 'browserify', 'mocha', 'chai' ],
+    frameworks: [ 'mocha', 'chai' ],
     
     client: {
       mocha: {
@@ -21,7 +21,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      "test/browser/*.js"
+      "test/browser/bundle.js"
     ],
 
 
@@ -33,7 +33,6 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'test/browser/*.js': [ 'browserify' ]
     },
 
 
@@ -63,7 +62,7 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: [
-      (process.env.CI ? 'Chrome_CI' : 'Chrome'),
+//      (process.env.CI ? 'Chrome_CI' : 'Chrome'),
       'Firefox'
     ],
     

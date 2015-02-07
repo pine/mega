@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>download</title>
+  </head>
+  <body>
+    <script src="../../test/browser/conf.js"></script>
+    <script src="mega.js"></script>
+    <script>
+!function () {
+  var mega = require('mega');
+  var storage = mega({
+    email: MEGA_ACCOUNT.email,
+    password: MEGA_ACCOUNT.password,
+    autoload: true
+  }, function (err) {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    
+    console.log(storage);
+    
+    storage.root.children.forEach(function (file) {
+      if (!file.directory) {
+        console.log(file);
+        
+        file.download(function (err, data) {
+          console.log(err, data);
+        });
+      }
+    });
+  });
+}();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>reload</title>
+  </head>
+  <body>
+    <script src="../../test/browser/conf.js"></script>
+    <script src="mega.js"></script>
+    <script>
+!function () {
+  var mega = require('mega');
+  var storage = mega({
+    email: MEGA_ACCOUNT.email,
+    password: MEGA_ACCOUNT.password,
+    autoload: false
+  }, function (err) {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    
+    console.log(storage);
+    
+    storage.reload(function (err) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      
+      console.log(storage);
+      console.log(storage.root);
+      console.log(storage.root.children);
+    });
+  });
+}();
+    </script>
+  </body>
+</html>

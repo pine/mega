@@ -3,12 +3,14 @@ var conf = require('./conf');
 
 describe('Login test', function () {
   it('should login succeeded', function (done) {
-    mega({
+    var storage = mega({
       email: conf.email,
-      password: conf.password
+      password: conf.password,
+      autoload: false
     }, function (err) {
       try {
         expect(err).to.not.be.ok;
+        expect(storage.email).to.equal(conf.email);
         done();
       }
       
@@ -21,7 +23,8 @@ describe('Login test', function () {
   it('should login failed', function (done) {
     mega({
       email: conf.email,
-      password: 'invalid_password'
+      password: 'invalid_password',
+      autoload: false
     }, function (err) {
       try {
         expect(err).to.be.ok;
