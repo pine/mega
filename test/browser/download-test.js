@@ -1,7 +1,6 @@
 var _ = require('lodash');
 var mega = require('../..');
 var conf = require('./conf');
-var uint8 = require('uint8')
 var blobUtil = require('blob-util');
 
 var TestFile1_txt = require('../files/TestFile1_txt');
