@@ -63,7 +63,8 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: [
       (process.env.CI ? 'Chrome_CI' : 'Chrome'),
-      'Firefox'
+      'Firefox',
+      'IE'
     ],
     
     customLaunchers: {

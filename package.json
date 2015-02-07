@@ -17,7 +17,7 @@
   "author": "Tõnis Tiigi <tonistiigi@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "browser-request": "^0.3.3",
+    "browser-request": "git+https://github.com/pine613/browser-request.git#bug/ie-headers",
     "isnode": "0.0.1",
     "request": ">=2.10.0",
     "stream-combiner": "0.0.1",
@@ -39,6 +39,7 @@
     "karma-chrome-launcher": "^0.1.7",
     "karma-cli": "0.0.4",
     "karma-firefox-launcher": "^0.1.4",
+    "karma-ie-launcher": "^0.1.5",
     "karma-mocha": "^0.1.10",
     "karma-mocha-reporter": "^0.3.1",
     "lodash": "^3.1.0",
